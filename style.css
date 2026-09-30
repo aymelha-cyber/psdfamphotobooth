@@ -8,16 +8,33 @@ body {
     line-height: 1.6;
 }
 
-header {
+/* INTRO HEADER WITH IMAGE */
+.intro-header {
     background-color: #1a1a1a;
     color: #fff;
-    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     padding: 30px 20px;
+    gap: 30px;
 }
 
-header h1 {
-    margin: 0;
+.intro-text h1 {
+    margin: 0 0 10px 0;
     font-size: 2.5rem;
+}
+
+.intro-text p {
+    margin: 0;
+    font-size: 1.2rem;
+    color: #ccc;
+}
+
+.intro-image img {
+    max-width: 250px; /* Dikdörtgen fotoğraf boyutu */
+    border-radius: 10px;
+    border: 3px solid #b30000;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
 }
 
 main {
@@ -34,14 +51,30 @@ h2 {
     padding-bottom: 10px;
 }
 
-/* HEARTBOUND INFO SECTION */
+/* HEARTBOUND INFO SECTION WITH POSTER */
 #heartbound-section {
     background: #fff;
     padding: 30px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     margin-bottom: 40px;
-    text-align: center;
+}
+
+.heartbound-content {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    margin-bottom: 20px;
+}
+
+.series-poster {
+    max-width: 220px; /* Afiş boyutu */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.series-info {
+    text-align: left;
 }
 
 .social-links {
@@ -52,7 +85,7 @@ h2 {
 .social-links a {
     color: #b30000;
     text-decoration: none;
-    margin: 0 10px;
+    margin-right: 15px;
 }
 
 .social-links a:hover {
@@ -221,6 +254,16 @@ footer {
 
 /* RESPONSIVE DESIGN FOR MOBILE */
 @media (max-width: 768px) {
+    .intro-header {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .heartbound-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
     .cast-card {
         flex-direction: column;
         text-align: center;
@@ -229,7 +272,8 @@ footer {
         margin-right: 0;
         margin-bottom: 15px;
     }
+    
     #booth-container {
-        height: 360px; /* Adjust height for mobile */
+        height: 360px;
     }
 }
