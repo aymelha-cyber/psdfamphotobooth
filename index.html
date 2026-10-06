@@ -25,6 +25,14 @@ footer{background:#eee7dd;border-top:1px solid #dcd1c3;padding:36px max(8%,calc(
 @media(max-width:760px){header{flex-wrap:wrap;padding:19px 6% 12px;gap:16px}.brand-lockup{gap:10px}.ps-mark{width:35px;height:35px;font-size:16px}.logo-title{font-size:23px}nav{width:100%;overflow-x:auto}nav ul{justify-content:space-between;gap:17px}nav a{font-size:10px;white-space:nowrap}.hero{padding:35px 6% 40px;grid-template-columns:1fr;gap:31px;min-height:0}.hero-left h1{font-size:clamp(39px,8vw,58px);letter-spacing:-1.7px;max-width:580px}.hero-desc{max-width:360px}.hero-steps{gap:17px;font-size:10px}.hero-right{width:min(100%,430px);margin:auto;padding:16px 17px 18px 0}.image-placeholder{aspect-ratio:1.35}.hero-tag{top:39px}.hero-note{font-size:22px}.eras-wrapper{padding:28px 6% 24px}.section-title{font-size:26px}.era-heading{margin-bottom:16px}.era-card{flex-basis:107px;height:137px}.promo-section{padding:33px 6% 32px;gap:18px}.promo-top{grid-template-columns:1fr;gap:26px;padding:23px}.promo-info h2{font-size:35px}.promo-info p{font-size:11px}.cards-row{grid-template-columns:1fr 1fr;gap:11px}.info-card{padding:18px 15px}.cast-section{padding:12px 6% 36px}.cast-header{align-items:flex-start;flex-direction:column;gap:3px}.cast-header h3{font-size:29px}.cast-grid{grid-template-columns:1fr;gap:15px}.cast-profile{display:grid;grid-template-columns:35% 1fr}.cast-img-container{height:100%;aspect-ratio:auto;min-height:185px}.cast-img-container:before{font-size:40px}.cast-img-container:after{font-size:5px;left:8px;bottom:9px;letter-spacing:.7px}.cast-details{padding:19px 15px}.cast-details p{font-size:10px}.cast-details h4{font-size:21px}footer{padding:29px 6% 18px}.footer-grid{grid-template-columns:1fr 1fr;gap:26px 22px}.footer-bottom{flex-wrap:wrap}.pinned-note{font-size:20px}.hero-tag{font-size:11px}}
 @media(max-width:370px){.hero-steps{flex-wrap:wrap;gap:10px}.hero-left h1{font-size:36px}.cast-profile{grid-template-columns:1fr}.cast-img-container{aspect-ratio:1.4;min-height:0}.footer-grid{grid-template-columns:1fr}.promo-info h2{font-size:29px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+
+/* Template selection and photobooth */
+[hidden]{display:none!important}.hero-steps{flex-wrap:wrap}.promo-actions{display:flex;gap:22px;flex-wrap:wrap}.cast-profile{display:flex;flex-direction:column}.cast-details{display:flex;flex-direction:column;flex:1}.cast-details p{margin-bottom:22px;font-size:12px}.cast-socials{margin-top:auto;border-top:1px solid var(--line);padding-top:8px}.cast-socials a{display:flex;align-items:center;gap:8px;padding:8px 0;font-size:11px;color:var(--muted);line-height:1.3}.cast-socials span{min-width:62px}.cast-socials strong{font-weight:500;color:var(--red);overflow-wrap:anywhere}.cast-socials i{font-style:normal;margin-left:auto}.cast-socials a:hover strong{text-decoration:underline}.template-preview{margin-top:20px;display:grid;grid-template-columns:1fr 1.2fr;align-items:center;gap:35px;border:1px solid #dcd1c3;border-radius:8px;background:var(--surface);overflow:hidden}.strip-stage{position:relative;min-height:300px;display:grid;place-items:center;background:radial-gradient(ellipse at 30% 20%,#f5ede3,#eee3d6);padding:28px 30px 45px}.paper-strip{--frame-bg:#8a3439;--frame-ink:#fff1e5;background:var(--frame-bg);color:var(--frame-ink);width:115px;padding:9px;box-shadow:0 12px 26px #2b1d2026;transform:rotate(-7deg);border-radius:1px}.strip-top{text-align:center;font-size:7px;letter-spacing:1.3px;padding:3px 0 7px}.strip-slot{background:linear-gradient(135deg,#ece4d9,#d7cbbf);aspect-ratio:4/3;margin-bottom:6px;display:grid;place-items:center;color:#ad9a8a;font:italic 21px var(--serif)}.strip-footer{text-align:center;font-size:8px;letter-spacing:.6px;line-height:1.6;padding-top:3px}.strip-footer small{font-size:6px;letter-spacing:1px}.preview-caption{position:absolute;bottom:11px;left:0;right:0;text-align:center;font:22px 'Caveat',cursive;color:var(--red)}.template-description{padding:25px 30px 25px 0;max-width:480px}.template-description h3{font:400 33px var(--serif);margin:6px 0 12px;line-height:1.15;letter-spacing:-.6px}.template-description p{font-size:12px;color:var(--muted);line-height:1.8}.template-description .frame-spec{margin-top:16px;font-size:10px;color:var(--red);letter-spacing:.4px}.template-description .btn-black{margin:20px 0 8px}.template-description .local-note{font-size:10px}.era-card[aria-pressed=true]{outline:1px solid #8a343944;outline-offset:3px}
+.booth-dialog{border:1px solid var(--line);border-radius:12px;background:var(--paper);color:var(--ink);padding:0;width:min(1000px,94vw);max-height:92vh;max-height:92dvh;margin:auto;box-shadow:0 30px 90px #1e101044;overflow:auto}.booth-dialog::backdrop{background:#241b18a3;backdrop-filter:blur(5px)}.booth-head{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:19px 25px;border-bottom:1px solid var(--line);background:var(--surface)}.booth-head h2{font:400 24px var(--serif)}.booth-head p{font-size:11px;color:var(--red)}.close-booth{background:transparent;border:1px solid var(--line);border-radius:50%;width:35px;height:35px;font-size:22px;color:var(--ink)}.booth-body{padding:25px}.booth-step{font-size:10px;color:var(--red);letter-spacing:1.5px;margin-bottom:15px;font-weight:600}.capture-layout{display:grid;grid-template-columns:1.4fr 1fr;gap:25px;align-items:start}.camera-stage{position:relative;aspect-ratio:4/3;border-radius:7px;background:#e6ddd1;overflow:hidden;border:1px solid var(--line)}.camera-stage video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transform:scaleX(-1)}.camera-hint{position:absolute;inset:0;display:grid;place-items:center;padding:30px;text-align:center;color:#938272;font:italic 25px var(--serif)}.camera-countdown{position:absolute;inset:0;display:grid;place-items:center;color:#fff;font:400 90px var(--serif);background:#00000018;text-shadow:0 3px 20px #0006;pointer-events:none}.booth-actions{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-top:17px}.booth-actions .btn-black{margin:0;font-size:11px;letter-spacing:.5px}.secondary-btn{padding:12px 15px;border:1px solid var(--line);border-radius:3px;background:var(--surface);color:var(--ink);font-size:11px}.secondary-btn:hover{border-color:var(--red)}.secondary-btn:disabled,.btn-black:disabled{opacity:.45}.capture-details h3,.selection-head h3,.export-details h3{font:400 29px var(--serif);line-height:1.2;margin-bottom:13px}.capture-details p,.selection-head p,.export-details p{font-size:12px;color:var(--muted);line-height:1.8}.capture-status{font-size:12px;min-height:2em;color:var(--red);margin-top:12px}.captured-thumbs{display:grid;grid-template-columns:repeat(5,1fr);gap:7px;margin-top:18px}.captured-thumbs img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:3px}.privacy-note{font-size:10px!important;margin-top:22px}.photo-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin-top:21px}.photo-choice{position:relative;background:var(--surface);padding:4px;border:1px solid var(--line);border-radius:5px;overflow:hidden}.photo-choice img{width:100%;aspect-ratio:4/3;object-fit:cover;display:block;border-radius:2px}.photo-choice[aria-pressed=true]{border:2px solid var(--red);padding:3px}.photo-choice .choice-order{position:absolute;top:10px;right:10px;border-radius:50%;background:var(--red);color:#fff;font-size:11px;width:23px;height:23px;display:grid;place-items:center}.selection-count{color:var(--red);font-size:12px;margin-top:12px}.export-layout{display:grid;grid-template-columns:1fr 1fr;gap:35px;align-items:center}.export-preview{display:grid;place-items:center;padding:20px;background:#eee5da;border-radius:6px}.export-preview canvas{display:block;width:auto;max-width:100%;height:auto;max-height:580px;box-shadow:0 10px 30px #35221d26}.export-details .booth-actions{margin:24px 0}.booth-error{margin-top:12px;line-height:1.7;font-size:12px;color:var(--red)}
+@media(max-width:760px){.template-preview{grid-template-columns:.8fr 1fr;gap:17px}.strip-stage{padding-left:15px;padding-right:15px}.template-description{padding:22px 15px 22px 0}.template-description h3{font-size:26px}.template-description .btn-black{font-size:9px;padding:12px;gap:9px}.cast-profile{display:grid;grid-template-columns:32% 1fr}.cast-img-container{min-height:220px}.cast-img-container:after{display:none}.cast-details p{font-size:12px}.capture-layout,.export-layout{grid-template-columns:1fr}.booth-body{padding:18px}.booth-head{padding:16px 18px}.capture-details h3{font-size:25px}.photo-grid{grid-template-columns:repeat(2,1fr);gap:10px}.export-preview canvas{max-height:440px}.capture-details .privacy-note{margin-top:15px}}
+@media(max-width:430px){.template-preview{grid-template-columns:1fr;gap:0}.strip-stage{min-height:300px}.template-description{padding:24px}.template-description .btn-black{font-size:11px;padding:14px 20px;gap:22px}.cast-profile{display:flex}.cast-img-container{aspect-ratio:1.5;min-height:0}.cast-details{padding:21px}.photo-grid{grid-template-columns:repeat(2,1fr)}}
+@media print{body.booth-printing>*{display:none!important}body.booth-printing>#print-strip{display:block!important;width:50mm;height:auto;margin:0 auto}body.booth-printing{background:white!important}@page{margin:10mm}}
+
 </style>
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%238a3439'/%3E%3Crect x='9' y='5' width='14' height='22' rx='1' fill='%23f7f3ed'/%3E%3Cpath d='M11 8h10v6H11zM11 16h10v6H11z' fill='%238a3439'/%3E%3C/svg%3E">
 </head>
@@ -38,7 +46,7 @@ footer{background:#eee7dd;border-top:1px solid #dcd1c3;padding:36px max(8%,calc(
                 <li><a href="#home" class="active">HOME</a></li>
                 <li><a href="#photobooth">PHOTOBOOTH</a></li>
                 <li><a href="#heartbound">HEARTBOUND</a></li>
-                <li><a href="#">GALLERY</a></li>
+                <li><a href="#cast">CAST</a></li>
                 <li><a href="#about">ABOUT</a></li>
             </ul>
         </nav>
@@ -49,9 +57,9 @@ footer{background:#eee7dd;border-top:1px solid #dcd1c3;padding:36px max(8%,calc(
         <div class="hero-left">
             <div class="eyebrow">FOR THE MOMENTS WE WANT TO KEEP</div><div class="script-text">capture the moment.</div>
             <h1>Make your own<br>fan <span>photobooth.</span></h1>
-            <p class="hero-desc">Take 10 photos, pick your favorite 4, and create your own photo strip.</p>
+            <p class="hero-desc">Choose your PerthSanta template, take 10 photos, and keep your favourite 4 in a photo strip made just for you.</p>
             
-            <button class="btn-black" id="start-booth" type="button" data-era="HEARTBOUND">START THE BOOTH <span class="arrow">&rarr;</span></button>
+            <button class="btn-black" id="start-booth" type="button" data-era="HEARTBOUND">CHOOSE A TEMPLATE <span class="arrow">&rarr;</span></button>
             
             <div class="hero-steps">
                 <span><i class="step-icon">01</i> TAKE 10 PHOTOS</span>
@@ -72,7 +80,7 @@ footer{background:#eee7dd;border-top:1px solid #dcd1c3;padding:36px max(8%,calc(
 
     <!-- ERAS CAROUSEL -->
     <section class="eras-wrapper" id="eras" aria-labelledby="eras-title">
-        <div class="era-heading"><div><span class="section-kicker">TEN ERAS. YOUR STORY.</span><h2 class="section-title" id="eras-title">Choose your era.</h2><p>A different frame for every favourite memory.</p></div><div class="era-arrows"><button type="button" data-scroll="-1" aria-label="Previous eras">←</button><button type="button" data-scroll="1" aria-label="Next eras">→</button></div></div>
+        <div class="era-heading"><div><span class="section-kicker">EIGHT ERAS. YOUR STORY.</span><h2 class="section-title" id="eras-title">Choose your template.</h2><p>Pick a frame, preview your strip, then step into the booth.</p></div><div class="era-arrows"><button type="button" data-scroll="-1" aria-label="Previous eras">←</button><button type="button" data-scroll="1" aria-label="Next eras">→</button></div></div>
         <div class="scroll-container">
             <button type="button" class="era-card" data-era="PERFECT TEN LINERS" aria-pressed="false">
                 <div class="era-icon-placeholder"></div>
@@ -115,17 +123,15 @@ footer{background:#eee7dd;border-top:1px solid #dcd1c3;padding:36px max(8%,calc(
                 <div class="era-num">08</div>
                 <div class="card-name">PERTHSANTA</div>
                 <span class="card-decor right">♡</span></button>
-            <button type="button" class="era-card" data-era="PERTH" aria-pressed="false">
-                <div class="era-icon-placeholder"></div>
-                <div class="era-num">09</div>
-                <div class="card-name">PERTH</div>
-                <span class="card-decor right">✦</span></button>
-            <button type="button" class="era-card" data-era="SANTA" aria-pressed="false">
-                <div class="era-icon-placeholder"></div>
-                <div class="era-num">10</div>
-                <div class="card-name">SANTA</div>
-                <span class="card-decor right">♡</span></button>
-        </div><p class="selected-era" aria-live="polite">Your selected era: <strong id="selected-era">HEARTBOUND</strong></p>
+        </div>
+        <div class="template-preview" id="template-preview">
+            <div class="strip-stage" aria-label="Selected photo strip preview">
+                <div class="paper-strip" id="paper-strip" aria-hidden="true"><div class="strip-top">THE BOOTH.</div><div class="strip-slot">01</div><div class="strip-slot">02</div><div class="strip-slot">03</div><div class="strip-slot">04</div><div class="strip-footer">HEARTBOUND<br><small>PERTHSANTA ♡</small></div></div>
+                <span class="preview-caption">your next favourite memory ♡</span>
+            </div>
+            <div class="template-description"><span class="section-kicker">YOUR FRAME, YOUR MOMENT</span><h3 id="template-name">Heartbound</h3><p id="template-description">A deep burgundy frame for a story written in the shadows.</p><p class="frame-spec">4 photos · vertical strip · PNG download</p><button type="button" class="btn-black" id="use-template">USE THIS TEMPLATE <span class="arrow">→</span></button><p class="local-note">Your photos stay in your browser.</p></div>
+        </div>
+<p class="selected-era" aria-live="polite">Your selected era: <strong id="selected-era">HEARTBOUND</strong></p>
     </section>
 
     <!-- HEARTBOUND PROMO SECTION -->
@@ -143,7 +149,7 @@ footer{background:#eee7dd;border-top:1px solid #dcd1c3;padding:36px max(8%,calc(
                 <div class="sub-title">IN THE SPOTLIGHT · NEW SERIES</div>
                 <h2>HEARTBOUND</h2>
                 <p>An unexpected event forces Aiyara, a young architect, to cross paths with Gun de Gustro, a ruthless Latin businessman from a mafia family. Like water and oil, they are completely opposite, but as they are caught in a dangerous underworld and power plays, the attraction between them grows stronger.</p>
-                <a class="btn-small" href="#cast">MEET THE CAST &rarr;</a>
+                <div class="promo-actions"><a class="btn-small" href="https://youtu.be/I1guVkLJ4mU?si=TGJ0Kj8y0cvsGNHr" target="_blank" rel="noopener noreferrer">WATCH THE TRAILER ↗</a><a class="btn-small" href="https://www.instagram.com/heartboundth_?utm_source=ig_web_button_share_sheet&amp;stkn=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener noreferrer">INSTAGRAM ↗</a></div>
             </div>
         </div>
 
@@ -152,7 +158,7 @@ footer{background:#eee7dd;border-top:1px solid #dcd1c3;padding:36px max(8%,calc(
                 <span class="info-card-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m10 9 5 3-5 3Z"/></svg></span>
                 <h4>WATCH TRAILER</h4>
                 <p>Check out the official trailer.</p>
-                <a href="https://youtu.be/I1guVkLJ4mU" target="_blank" rel="noopener noreferrer" style="width: 100%;" class="card-btn">WATCH NOW</a>
+                <a href="https://youtu.be/I1guVkLJ4mU?si=TGJ0Kj8y0cvsGNHr" target="_blank" rel="noopener noreferrer" style="width: 100%;" class="card-btn">WATCH NOW</a>
             </div>
             <div class="info-card">
                 <span class="info-card-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="9" cy="8" r="3"/><path d="M3 21v-3a6 6 0 0 1 12 0v3M16 5a3 3 0 0 1 0 6m2 3a5 5 0 0 1 3 4v3"/></svg></span>
@@ -169,8 +175,8 @@ footer{background:#eee7dd;border-top:1px solid #dcd1c3;padding:36px max(8%,calc(
             <div class="info-card">
                 <span class="info-card-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7 0l3-3a5 5 0 0 0-7-7l-2 2M14 11a5 5 0 0 0-7 0l-3 3a5 5 0 0 0 7 7l2-2"/></svg></span>
                 <h4>OFFICIAL LINKS</h4>
-                <p>Follow the official accounts.</p>
-                <a href="https://x.com/HeartboundTH?s=20" target="_blank" rel="noopener noreferrer" style="width: 100%;" class="card-btn">GO NOW</a>
+                <p>Follow Heartbound on Instagram.</p>
+                <a href="https://www.instagram.com/heartboundth_?utm_source=ig_web_button_share_sheet&amp;stkn=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener noreferrer" style="width: 100%;" class="card-btn">@HEARTBOUNDTH_</a>
             </div>
         </div>
     </section>
@@ -179,36 +185,18 @@ footer{background:#eee7dd;border-top:1px solid #dcd1c3;padding:36px max(8%,calc(
     <section class="cast-section" id="cast">
         <div class="cast-header"><div><span class="section-kicker">BEHIND THE STORY</span><h3>Meet the cast.</h3></div><p>The faces behind Heartbound.</p></div>
         <div class="cast-grid">
-            <div class="cast-profile">
-                <div class="cast-img-container" data-initials="PT">
-                    <img src="fotograf_1.jfif" alt="Perth Tanapon">
-                </div>
-                <div class="cast-details">
-                    <h4>Perth Tanapon</h4>
-                    <h5>as Gun de Gustro</h5>
-                    <p>Stepping into the spotlight around 2017, Perth quickly rose to international fame. Known for his ability to convey deep, complex emotions, he is a multi-talented artist, gifted musician, singer, and guitarist.</p>
-                </div>
-            </div>
-            <div class="cast-profile">
-                <div class="cast-img-container" data-initials="SP">
-                    <img src="fotograf_2.jfif" alt="Santa Pongsapak">
-                </div>
-                <div class="cast-details">
-                    <h4>Santa Pongsapak</h4>
-                    <h5>as Aiyara Singamekha</h5>
-                    <p>Santa burst onto the scene capturing hearts with his phenomenal dance skills and highly expressive acting. Known for his incredible versatility and natural ability to bring deep emotional resonance to his characters.</p>
-                </div>
-            </div>
-            <div class="cast-profile">
-                <div class="cast-img-container" data-initials="TT">
-                    <img src="fotograf_3.jfif" alt="Tytan">
-                </div>
-                <div class="cast-details">
-                    <h4>Tytan Teepprasan</h4>
-                    <h5>as Narin</h5>
-                    <p>Tytan Teepprasan has captured hearts with his natural charm, captivating screen presence, and versatile acting skills. Known for bringing depth and personality to every character he portrays.</p>
-                </div>
-            </div>
+<article class="cast-profile">
+ <div class="cast-img-container" data-initials="PT"><img src="fotograf_1.jfif" alt="Perth Tanapon" loading="lazy"></div>
+ <div class="cast-details"><h4>Perth Tanapon</h4><h5>as Gun de Gustro</h5><p>Stepping into the spotlight around 2017, Perth quickly rose to international fame. Known for his ability to convey deep, complex emotions, he is a multi-talented artist, gifted musician, singer, and guitarist. He is currently gearing up for his highly anticipated solo projects, Scarlet Heart and High &amp; Low.</p><div class="cast-socials" aria-label="Perth Tanapon social accounts"><a href="https://www.instagram.com/perthppe/" target="_blank" rel="noopener noreferrer" aria-label="Perth Tanapon on Instagram"><span>Instagram</span><strong>@perthppe</strong><i aria-hidden="true">↗</i></a><a href="https://x.com/perthppe" target="_blank" rel="noopener noreferrer" aria-label="Perth Tanapon on X"><span>X</span><strong>@perthppe</strong><i aria-hidden="true">↗</i></a><a href="https://www.tiktok.com/@perth.ppe" target="_blank" rel="noopener noreferrer" aria-label="Perth Tanapon on TikTok"><span>TikTok</span><strong>@perth.ppe</strong><i aria-hidden="true">↗</i></a></div></div>
+</article>
+<article class="cast-profile">
+ <div class="cast-img-container" data-initials="SP"><img src="fotograf_2.jfif" alt="Santa Pongsapak" loading="lazy"></div>
+ <div class="cast-details"><h4>Santa Pongsapak</h4><h5>as Aiyara Singamekha</h5><p>Santa burst onto the scene capturing hearts with his phenomenal dance skills and highly expressive acting. Known for his incredible versatility and natural ability to bring deep emotional resonance to his characters, he truly lights up the screen with every performance. Beyond his outstanding acting prowess, he is also a talented performer and a proud member of the beloved T-Pop group Jasper.</p><div class="cast-socials" aria-label="Santa Pongsapak social accounts"><a href="https://www.instagram.com/santa.pp/" target="_blank" rel="noopener noreferrer" aria-label="Santa Pongsapak on Instagram"><span>Instagram</span><strong>@santa.pp</strong><i aria-hidden="true">↗</i></a><a href="https://x.com/ppsanta" target="_blank" rel="noopener noreferrer" aria-label="Santa Pongsapak on X"><span>X</span><strong>@ppsanta</strong><i aria-hidden="true">↗</i></a><a href="https://www.tiktok.com/@santa.pp" target="_blank" rel="noopener noreferrer" aria-label="Santa Pongsapak on TikTok"><span>TikTok</span><strong>@santa.pp</strong><i aria-hidden="true">↗</i></a></div></div>
+</article>
+<article class="cast-profile">
+ <div class="cast-img-container" data-initials="TT"><img src="fotograf_3.jfif" alt="Tytan Teepprasan" loading="lazy"></div>
+ <div class="cast-details"><h4>Tytan Teepprasan</h4><h5>as Narin</h5><p>Tytan Teepprasan has captured hearts with his natural charm, captivating screen presence, and versatile acting skills. Known for bringing depth and personality to every character he portrays, he continues to leave a lasting impression with every performance. Beyond his acting, Tytan is also a talented singer, songwriter, and music producer, showcasing his versatility as both an artist and performer.</p><div class="cast-socials" aria-label="Tytan Teepprasan social accounts"><a href="https://www.instagram.com/tytan.t/" target="_blank" rel="noopener noreferrer" aria-label="Tytan Teepprasan on Instagram"><span>Instagram</span><strong>@tytan.t</strong><i aria-hidden="true">↗</i></a><a href="https://x.com/TytanT" target="_blank" rel="noopener noreferrer" aria-label="Tytan Teepprasan on X"><span>X</span><strong>@TytanT</strong><i aria-hidden="true">↗</i></a><a href="https://www.tiktok.com/@tytan.t" target="_blank" rel="noopener noreferrer" aria-label="Tytan Teepprasan on TikTok"><span>TikTok</span><strong>@tytan.t</strong><i aria-hidden="true">↗</i></a></div></div>
+</article>
         </div>
     </section>
 
@@ -219,7 +207,7 @@ footer{background:#eee7dd;border-top:1px solid #dcd1c3;padding:36px max(8%,calc(
                 <h3>THE BOOTH.<span>✦</span></h3>
                 <p>by fans, for fans.</p>
                 <div class="social-icons">
-                    <a href="https://x.com/laylayleee" target="_blank" rel="noopener noreferrer" aria-label="laylayleee on X">𝕏</a><a href="https://youtu.be/I1guVkLJ4mU" target="_blank" rel="noopener noreferrer" aria-label="Heartbound trailer">↗</a>
+                    <a href="https://x.com/laylayleee" target="_blank" rel="noopener noreferrer" aria-label="laylayleee on X">𝕏</a><a href="https://youtu.be/I1guVkLJ4mU?si=TGJ0Kj8y0cvsGNHr" target="_blank" rel="noopener noreferrer" aria-label="Heartbound trailer">↗</a>
                 </div>
             </div>
             <div class="footer-col">
@@ -231,7 +219,7 @@ footer{background:#eee7dd;border-top:1px solid #dcd1c3;padding:36px max(8%,calc(
                 <ul>
                     <li>Disclaimer</li>
                     <li>Terms of Use</li>
-                    <li>Privacy Policy</li>
+                    <li>Photos stay on your device</li>
                 </ul>
             </div>
             <div class="footer-col">
@@ -250,30 +238,174 @@ footer{background:#eee7dd;border-top:1px solid #dcd1c3;padding:36px max(8%,calc(
     </footer>
 
 
+
+<dialog class="booth-dialog" id="booth-dialog" aria-labelledby="booth-title">
+ <div class="booth-head"><div><h2 id="booth-title">Your little photobooth.</h2><p id="booth-era">Heartbound</p></div><button type="button" class="close-booth" id="close-booth" aria-label="Close photobooth">×</button></div>
+ <div class="booth-body">
+  <section id="capture-panel"><p class="booth-step">01 / TAKE YOUR PHOTOS</p><div class="capture-layout"><div><div class="camera-stage"><div id="camera-hint" class="camera-hint">Your moment starts here.</div><video id="camera" autoplay muted playsinline hidden></video><div class="camera-countdown" id="countdown" hidden aria-hidden="true"></div></div><p id="capture-status" class="capture-status" role="status">Enable your camera when you are ready.</p><div class="captured-thumbs" id="captured-thumbs"></div></div><div class="capture-details"><h3>A frame. Ten moments.</h3><p>Each photo has a 3-second countdown. Take 10, then choose the 4 you love most. The saved photos match your mirrored preview.</p><div class="booth-actions"><button type="button" id="enable-camera" class="btn-black">ENABLE CAMERA</button><button type="button" id="take-photos" class="btn-black" disabled>TAKE 10 PHOTOS</button><button type="button" id="stop-capture" class="secondary-btn" hidden>STOP</button></div><div class="booth-actions"><button type="button" id="upload-photos" class="secondary-btn">UPLOAD PHOTOS INSTEAD</button><input id="photo-files" type="file" accept="image/*" multiple hidden></div><p class="booth-error" id="camera-error" role="alert" hidden></p><p class="privacy-note">Your camera opens only with your permission. Photos are processed on your device and are never uploaded by this page.</p></div></div></section>
+  <section id="selection-panel" hidden><p class="booth-step">02 / PICK YOUR FAVOURITE FOUR</p><div class="selection-head"><h3>Keep the ones you love.</h3><p>Tap four photos in the order you want them on your strip. Tap again to remove a photo.</p></div><p id="selection-count" class="selection-count" role="status">0 / 4 selected</p><div class="photo-grid" id="photo-grid"></div><div class="booth-actions"><button type="button" id="create-strip" class="btn-black" disabled>CREATE MY STRIP →</button><button type="button" id="retake-photos" class="secondary-btn">RETAKE PHOTOS</button></div></section>
+  <section id="export-panel" hidden><p class="booth-step">03 / A LITTLE MEMORY TO KEEP</p><div class="export-layout"><div class="export-preview"><canvas id="result-canvas" aria-label="Your finished four-photo strip"></canvas></div><div class="export-details"><h3>Made by you.<br>Kept forever.</h3><p>Your selected template and favourite photos, together in one strip.</p><div class="booth-actions"><button type="button" id="download-strip" class="btn-black">DOWNLOAD PNG ↓</button><button type="button" id="print-photo-strip" class="secondary-btn">PRINT</button><button type="button" id="edit-selection" class="secondary-btn">CHANGE PHOTOS</button></div><p class="privacy-note">Nothing is saved online. Download your strip before closing the booth.</p><p id="export-error" class="booth-error" role="alert" hidden></p></div></div></section>
+ </div>
+</dialog>
+<img id="print-strip" hidden alt="Your PerthSanta photo strip for printing">
+
 <script>
-// Real supplied photos replace the styled empty states automatically.
-document.querySelectorAll('img').forEach(img=>{
-  const failed=()=>{img.hidden=true;};
-  img.addEventListener('error',failed);
-  img.addEventListener('load',()=>{img.hidden=false;});
-  if(img.complete && !img.naturalWidth) failed();
-});
+(() => {
+'use strict';
+const $ = id => document.getElementById(id);
+const themes = {
+ 'PERFECT TEN LINERS': {name:'Perfect Ten Liners',bg:'#eee3ce',ink:'#485a4f',description:'A warm ivory frame for the memories that started it all.'},
+ 'ME AND THEE': {name:'Me and Thee',bg:'#d5e0d8',ink:'#355448',description:'A soft sage frame for your favourite Me and Thee moments.'},
+ 'LOVE YOU, TEACHER': {name:'Love You, Teacher',bg:'#f1dfba',ink:'#755934',description:'A little warmth, a little sunshine, and a memory to keep.'},
+ 'HEARTBOUND': {name:'Heartbound',bg:'#8a3439',ink:'#fff1e5',description:'A deep burgundy frame for a story written in the shadows.'},
+ 'TIME STOPPER CON': {name:'Time Stopper Con',bg:'#314457',ink:'#f4ece1',description:'A midnight-blue frame for a moment you wish you could pause.'},
+ "DEVIL'S KISS CON": {name:"Devil’s Kiss Con",bg:'#3e272f',ink:'#f5d2c8',description:'A plum frame with a little Devil’s Kiss energy.'},
+ 'DOMIIA': {name:'Domiia',bg:'#ead9d4',ink:'#844a4b',description:'A rose-toned keepsake for our little fan universe.'},
+ 'PERTHSANTA': {name:'PerthSanta',bg:'#f6efe2',ink:'#8a3439',description:'A classic cream frame. PerthSanta, always.'}
+};
+let selectedEra='HEARTBOUND', sessionEra=selectedEra;
 const eraButtons=[...document.querySelectorAll('.era-card')];
-eraButtons.forEach(button=>button.addEventListener('click',()=>{
-  eraButtons.forEach(item=>{item.classList.remove('active-card');item.setAttribute('aria-pressed','false');});
-  button.classList.add('active-card');button.setAttribute('aria-pressed','true');
-  document.getElementById('selected-era').textContent=button.dataset.era;
-  document.getElementById('start-booth').dataset.era=button.dataset.era;
+function applyTemplate(era){
+ if(!themes[era])return;
+ selectedEra=era;const t=themes[era];
+ eraButtons.forEach(b=>{const active=b.dataset.era===era;b.classList.toggle('active-card',active);b.setAttribute('aria-pressed',String(active));});
+ $('selected-era').textContent=era;$('start-booth').dataset.era=era;
+ $('template-name').textContent=t.name;$('template-description').textContent=t.description;
+ $('paper-strip').style.setProperty('--frame-bg',t.bg);$('paper-strip').style.setProperty('--frame-ink',t.ink);
+ const footer=$('paper-strip').querySelector('.strip-footer');footer.replaceChildren(document.createTextNode(era),document.createElement('br'));
+ const small=document.createElement('small');small.textContent='PERTHSANTA ♡';footer.append(small);
+}
+eraButtons.forEach(b=>b.addEventListener('click',()=>applyTemplate(b.dataset.era)));
+applyTemplate(selectedEra);
+document.querySelectorAll('[data-scroll]').forEach(b=>b.addEventListener('click',()=>{
+ const row=document.querySelector('.scroll-container');row.scrollBy({left:Number(b.dataset.scroll)*row.clientWidth*.7,behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth'});
 }));
-document.querySelectorAll('[data-scroll]').forEach(button=>button.addEventListener('click',()=>{
-  const row=document.querySelector('.scroll-container');
-  row.scrollBy({left:Number(button.dataset.scroll)*row.clientWidth*.7,behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth'});
-}));
-// Camera flow was not provided in the original file. Retain its entry point,
-// and expose the selected era for the real photobooth integration.
-document.getElementById('start-booth').addEventListener('click',event=>{
-  document.dispatchEvent(new CustomEvent('booth:start',{detail:{era:event.currentTarget.dataset.era}}));
+$('start-booth').addEventListener('click',()=>{
+ $('eras').scrollIntoView({behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth'});
+ eraButtons.find(b=>b.dataset.era===selectedEra)?.focus({preventScroll:true});
 });
+document.querySelectorAll('.image-placeholder img,.cast-img-container img').forEach(img=>{
+ img.addEventListener('error',()=>img.hidden=true);img.addEventListener('load',()=>img.hidden=false);
+ if(img.complete&&!img.naturalWidth)img.hidden=true;
+});
+const dialog=$('booth-dialog'),video=$('camera');
+let stream=null,photos=[],selected=[],busy=false,run=0,cameraRequest=0;
+const pause = ms => new Promise(resolve=>setTimeout(resolve,ms));
+function showPanel(id){['capture-panel','selection-panel','export-panel'].forEach(name=>$(name).hidden=name!==id);}
+function setBusy(value){busy=value;$('take-photos').disabled=value||!stream;$('enable-camera').disabled=value;$('upload-photos').disabled=value;$('stop-capture').hidden=!value;}
+function stopCamera(){cameraRequest++;if(stream){stream.getTracks().forEach(track=>track.stop());stream=null;}video.srcObject=null;video.hidden=true;$('camera-hint').hidden=false;$('take-photos').disabled=true;}
+function resetPhotos(){photos=[];selected=[];$('captured-thumbs').replaceChildren();$('photo-grid').replaceChildren();$('photo-files').value='';$('selection-count').textContent='0 / 4 selected';$('create-strip').disabled=true;}
+function closeBooth(){run++;setBusy(false);stopCamera();$('countdown').hidden=true;resetPhotos();$('result-canvas').width=1;$('result-canvas').height=1;}
+dialog.addEventListener('close',closeBooth);
+$('close-booth').addEventListener('click',()=>dialog.close());
+$('use-template').addEventListener('click',()=>{
+ sessionEra=selectedEra;$('booth-era').textContent=themes[sessionEra].name;
+ $('camera-error').hidden=true;$('export-error').hidden=true;$('enable-camera').hidden=false;
+ $('capture-status').textContent='Enable your camera when you are ready.';resetPhotos();showPanel('capture-panel');dialog.showModal();
+});
+async function enableCamera(){
+ const request=++cameraRequest;
+ $('camera-error').hidden=true;$('enable-camera').disabled=true;$('capture-status').textContent='Waiting for camera permission…';
+ try{
+  if(!navigator.mediaDevices?.getUserMedia)throw new Error('unavailable');
+  const incoming=await navigator.mediaDevices.getUserMedia({video:{facingMode:'user',width:{ideal:1280},height:{ideal:960}},audio:false});
+  if(request!==cameraRequest||!dialog.open){incoming.getTracks().forEach(track=>track.stop());return;}
+  stream=incoming;video.srcObject=stream;await video.play();
+  if(request!==cameraRequest||!dialog.open)return;
+  video.hidden=false;$('camera-hint').hidden=true;$('enable-camera').hidden=true;$('take-photos').disabled=false;
+  $('capture-status').textContent='Camera ready. Find your pose, then take 10 photos.';
+ }catch(error){
+  if(request!==cameraRequest||!dialog.open)return;
+  stopCamera();$('enable-camera').hidden=false;
+  $('camera-error').textContent=error.name==='NotAllowedError'?'Camera permission was declined. Allow camera access in your browser settings, or upload photos instead.':'Camera could not open. Try this page over HTTPS or localhost, or upload photos instead.';
+  $('camera-error').hidden=false;$('capture-status').textContent='You can also use photos from your device.';
+ }finally{if(dialog.open&&!busy)$('enable-camera').disabled=false;}
+}
+$('enable-camera').addEventListener('click',enableCamera);
+function cropPhoto(source,w,h,mirror=false){
+ const canvas=document.createElement('canvas');canvas.width=720;canvas.height=540;const c=canvas.getContext('2d');
+ const ratio=4/3;let sw=w,sh=h;if(w/h>ratio)sw=h*ratio;else sh=w/ratio;
+ if(mirror){c.translate(canvas.width,0);c.scale(-1,1);}
+ c.drawImage(source,(w-sw)/2,(h-sh)/2,sw,sh,0,0,720,540);return canvas.toDataURL('image/jpeg',.92);
+}
+function loadImage(src){return new Promise((resolve,reject)=>{const image=new Image();image.onload=()=>resolve(image);image.onerror=()=>reject(new Error('Image could not be read.'));image.src=src;});}
+function addThumb(src,index){const img=document.createElement('img');img.src=src;img.alt=`Captured photo ${index+1}`;$('captured-thumbs').append(img);}
+$('take-photos').addEventListener('click',async()=>{
+ if(busy||!stream)return;
+ if(!video.videoWidth){$('capture-status').textContent='The camera is still warming up. Please try again in a moment.';return;}
+ const token=++run;setBusy(true);$('camera-error').hidden=true;
+ try{
+  while(photos.length<10){
+   $('capture-status').textContent=`Get ready for photo ${photos.length+1} of 10.`;
+   for(let n=3;n>=1;n--){if(token!==run||!dialog.open)return;$('countdown').hidden=false;$('countdown').textContent=n;await pause(1000);}
+   if(token!==run||!dialog.open)return;
+   if(!stream||!video.videoWidth)throw new Error('The camera connection stopped. Enable your camera again to continue.');
+   $('countdown').hidden=true;const src=cropPhoto(video,video.videoWidth,video.videoHeight,true);photos.push(src);addThumb(src,photos.length-1);
+  }
+  if(token===run&&dialog.open){stopCamera();showSelection();}
+ }catch(error){if(token===run){$('camera-error').textContent=error.message;$('camera-error').hidden=false;}}
+ finally{if(token===run){setBusy(false);$('countdown').hidden=true;}}
+});
+$('stop-capture').addEventListener('click',()=>{run++;setBusy(false);$('countdown').hidden=true;$('capture-status').textContent=`Paused. ${photos.length} / 10 photos taken. Click Take 10 Photos to continue.`;});
+$('upload-photos').addEventListener('click',()=>{if(!busy)$('photo-files').click();});
+$('photo-files').addEventListener('change',async event=>{
+ const files=[...event.target.files];if(!files.length)return;
+ if(files.length<4||files.length>10){$('camera-error').textContent='Please choose between 4 and 10 photos.';$('camera-error').hidden=false;event.target.value='';return;}
+ const token=++run;setBusy(true);$('stop-capture').hidden=true;$('camera-error').hidden=true;$('capture-status').textContent='Preparing your photos…';
+ try{
+  const decoded=await Promise.all(files.map(async file=>{const url=URL.createObjectURL(file);try{const image=await loadImage(url);return cropPhoto(image,image.naturalWidth,image.naturalHeight);}finally{URL.revokeObjectURL(url);}}));
+  if(token!==run||!dialog.open)return;photos=decoded;selected=[];stopCamera();showSelection();
+ }catch(error){if(token===run){$('camera-error').textContent='A photo could not be read. Please try JPG, PNG, or WebP images.';$('camera-error').hidden=false;}}
+ finally{if(token===run)setBusy(false);event.target.value='';}
+});
+function refreshChoices(message=''){
+ document.querySelectorAll('.photo-choice').forEach(button=>{
+  const pos=selected.indexOf(Number(button.dataset.index));button.setAttribute('aria-pressed',String(pos>=0));
+  const badge=button.querySelector('.choice-order');badge.hidden=pos<0;badge.textContent=pos+1;
+ });
+ $('selection-count').textContent=message||`${selected.length} / 4 selected`;$('create-strip').disabled=selected.length!==4;
+}
+function showSelection(){
+ selected=[];const grid=$('photo-grid');grid.replaceChildren();photos.forEach((src,index)=>{
+  const button=document.createElement('button');button.type='button';button.className='photo-choice';button.dataset.index=index;button.setAttribute('aria-label',`Choose photo ${index+1}`);button.setAttribute('aria-pressed','false');
+  const image=document.createElement('img');image.src=src;image.alt=`Photo ${index+1}`;
+  const badge=document.createElement('span');badge.className='choice-order';badge.hidden=true;badge.setAttribute('aria-hidden','true');button.append(image,badge);
+  button.addEventListener('click',()=>{const pos=selected.indexOf(index);if(pos>=0)selected.splice(pos,1);else if(selected.length<4)selected.push(index);else{refreshChoices('4 / 4 selected. Remove one photo to choose another.');return;}refreshChoices();});grid.append(button);
+ });refreshChoices();showPanel('selection-panel');$('create-strip').focus({preventScroll:true});
+}
+$('retake-photos').addEventListener('click',()=>{run++;stopCamera();setBusy(false);resetPhotos();showPanel('capture-panel');$('enable-camera').hidden=false;$('capture-status').textContent='Enable your camera to take another set of photos.';$('camera-error').hidden=true;});
+async function renderStrip(){
+ if(selected.length!==4)throw new Error('Choose exactly four photos first.');
+ const images=await Promise.all(selected.map(index=>loadImage(photos[index])));
+ const t=themes[sessionEra],canvas=$('result-canvas'),margin=24,photoWidth=672,photoHeight=504,gap=14,top=86,footer=115;
+ canvas.width=720;canvas.height=top+4*(photoHeight+gap)+footer;
+ const c=canvas.getContext('2d');c.fillStyle=t.bg;c.fillRect(0,0,canvas.width,canvas.height);
+ c.fillStyle=t.ink;c.textAlign='center';c.font='26px Georgia';c.fillText('THE BOOTH.',360,43);c.font='11px Arial';c.fillText('A PERTHSANTA FAN PHOTOBOOTH',360,64);
+ images.forEach((image,index)=>c.drawImage(image,margin,top+index*(photoHeight+gap),photoWidth,photoHeight));
+ const y=top+4*(photoHeight+gap);c.fillStyle=t.ink;c.font='22px Georgia';c.fillText(sessionEra,360,y+33);c.font='12px Arial';c.fillText('PERTHSANTA  ♡  '+new Date().toLocaleDateString('en-GB'),360,y+61);c.font='11px Arial';c.fillText('made with love · @laylayleee',360,y+87);
+}
+$('create-strip').addEventListener('click',async()=>{
+ const token=run;$('create-strip').disabled=true;$('export-error').hidden=true;
+ try{await renderStrip();if(token===run&&dialog.open){showPanel('export-panel');$('download-strip').focus({preventScroll:true});}}
+ catch(error){if(dialog.open)$('selection-count').textContent='Your strip could not be created. Please try again.';}
+ finally{$('create-strip').disabled=selected.length!==4;}
+});
+$('edit-selection').addEventListener('click',()=>{showPanel('selection-panel');refreshChoices();});
+$('download-strip').addEventListener('click',()=>{
+ $('result-canvas').toBlob(blob=>{
+  if(!blob){$('export-error').textContent='The download could not be prepared. Please try again.';$('export-error').hidden=false;return;}
+  const url=URL.createObjectURL(blob),link=document.createElement('a');link.href=url;link.download=`perthsanta-${sessionEra.toLowerCase().replace(/[^a-z0-9]+/g,'-')}-strip.png`;document.body.append(link);link.click();link.remove();setTimeout(()=>URL.revokeObjectURL(url),2000);
+ },'image/png');
+});
+$('print-photo-strip').addEventListener('click',async()=>{
+ const image=$('print-strip');image.src=$('result-canvas').toDataURL('image/png');
+ try{await image.decode();}catch{return;}
+ document.body.classList.add('booth-printing');image.hidden=false;window.print();
+});
+window.addEventListener('afterprint',()=>{document.body.classList.remove('booth-printing');$('print-strip').hidden=true;});
+window.addEventListener('pagehide',()=>{run++;stopCamera();});
+})();
+
 </script>
 
 </body>
