@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>THE BOOTH. - PerthSanta</title>
+    <title>THE BOOTH. — A PerthSanta fan photobooth</title>
+    <meta name="description" content="A PerthSanta fan photobooth. Take 10 photos, choose your favourite 4 and keep a little moment from your favourite era.">
     
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -11,155 +12,34 @@
     <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&family=Great+Vibes&family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&display=swap" rel="stylesheet">
     
     <style>
-        :root {
-            --bg-paper: #F4EFE6;
-            --bg-dark: #0A0A0A;
-            --accent-red: #8B2222;
-            --text-main: #2A2A2A;
-            --border-light: #D4CFC4;
-            --card-bg: #FCFAF5;
-        }
-
-        * { box-sizing: border-box; margin: 0; padding: 0; }
-        body { font-family: 'Inter', sans-serif; background-color: var(--bg-paper); color: var(--text-main); overflow-x: hidden; }
-        a { text-decoration: none; color: inherit; transition: opacity 0.3s; }
-        a:hover { opacity: 0.7; }
-
-        /* HEADER */
-        header { display: flex; justify-content: space-between; align-items: center; padding: 20px 60px; background-color: var(--bg-dark); color: #fff; border-bottom: 2px solid #222; }
-        .logo-title { font-family: 'Playfair Display', serif; font-size: 28px; font-weight: 700; letter-spacing: 2px; display: flex; flex-direction: column; line-height: 1; }
-        .logo-title span.sub { font-family: 'Courier New', monospace; font-size: 9px; letter-spacing: 3px; font-weight: 400; color: #888; margin-top: 5px; text-transform: uppercase; }
-        .logo-title .star { color: var(--accent-red); font-size: 20px; vertical-align: super; }
-        
-        nav ul { list-style: none; display: flex; gap: 40px; align-items: center; }
-        nav ul li a { font-size: 11px; text-transform: uppercase; letter-spacing: 2px; font-weight: 600; position: relative; color: #ccc; }
-        nav ul li a.active { color: #fff; }
-        nav ul li a.active::after { content: '•'; position: absolute; bottom: -15px; left: 50%; transform: translateX(-50%); color: var(--accent-red); font-size: 20px; }
-
-        /* HERO SECTION */
-        .hero { display: flex; padding: 60px 80px; gap: 60px; min-height: 500px; position: relative; border-bottom: 1px solid var(--border-light); }
-        
-        .hero-left { flex: 1; padding-top: 40px; position: relative; z-index: 2; }
-        .script-text { font-family: 'Great Vibes', cursive; color: var(--accent-red); font-size: 48px; margin-bottom: -10px; margin-left: 20px; transform: rotate(-2deg); }
-        .hero-left h1 { font-size: 55px; font-weight: 900; line-height: 1; letter-spacing: -1px; margin-bottom: 30px; color: #1a1a1a; font-family: 'Inter', sans-serif; text-transform: uppercase; }
-        .hero-left h1 span { color: var(--accent-red); }
-        
-        .hero-desc { font-size: 14px; line-height: 1.6; margin-bottom: 30px; color: #444; max-width: 320px; font-weight: 500; border-top: 1px solid var(--border-light); padding-top: 20px; }
-        
-        .btn-black { background-color: var(--bg-dark); color: #fff; padding: 18px 35px; border: none; border-radius: 6px; font-size: 13px; font-weight: 700; letter-spacing: 2px; cursor: pointer; transition: background 0.3s; margin-bottom: 40px; display: inline-flex; align-items: center; gap: 15px; }
-        .btn-black:hover { background-color: var(--accent-red); }
-        .btn-black .arrow { color: var(--accent-red); font-weight: normal; font-size: 16px; }
-        
-        /* Hero Steps (Take 10 photos etc.) */
-        .hero-steps { display: flex; gap: 25px; font-size: 10px; font-weight: 700; color: #555; letter-spacing: 1px; text-transform: uppercase; }
-        .hero-steps span { display: flex; align-items: center; gap: 8px; }
-        .step-icon { font-size: 16px; font-style: normal; }
-
-        /* HERO RIGHT - RECTANGULAR PLACEHOLDER */
-        .hero-right { flex: 1.2; position: relative; display: flex; align-items: center; justify-content: center; }
-        .image-placeholder { width: 100%; height: 100%; min-height: 400px; background-color: #E8E3D8; border: 2px dashed #C5C0B5; border-radius: 12px; display: flex; flex-direction: column; align-items: center; justify-content: center; overflow: hidden; position: relative; box-shadow: 5px 5px 20px rgba(0,0,0,0.05); }
-        .image-placeholder img { width: 100%; height: 100%; object-fit: cover; position: absolute; top: 0; left: 0; }
-        .image-placeholder p { color: #888; font-size: 14px; font-weight: 600; letter-spacing: 1px; z-index: 1; }
-
-        /* ERAS CAROUSEL SECTION */
-        .eras-wrapper { padding: 40px 0; text-align: center; background-color: #F8F5EE; border-bottom: 1px solid var(--border-light); position: relative; }
-        .section-title { font-weight: 800; letter-spacing: 6px; font-size: 16px; margin-bottom: 35px; display: flex; align-items: center; justify-content: center; gap: 20px; text-transform: uppercase; color: #111; }
-        .section-title::before, .section-title::after { content: "✦"; color: var(--accent-red); font-weight: 300; font-size: 20px; }
-
-        .scroll-container { display: flex; gap: 20px; overflow-x: auto; padding: 10px 80px 30px 80px; scrollbar-width: none; align-items: center; }
-        .scroll-container::-webkit-scrollbar { display: none; }
-
-        .era-card { min-width: 130px; height: 180px; background: transparent; border: 1px solid var(--border-light); border-radius: 12px; display: flex; flex-direction: column; align-items: center; justify-content: center; cursor: pointer; transition: all 0.3s; position: relative; padding: 20px 10px; }
-        .era-card:hover { border-color: #A9A49A; background: #fff; }
-        
-        .active-card { border-color: var(--accent-red); background-color: var(--card-bg); box-shadow: 0 10px 20px rgba(139, 34, 34, 0.05); }
-        .badge-new { position: absolute; top: -10px; right: -10px; background: var(--accent-red); color: white; font-size: 9px; padding: 4px 8px; border-radius: 12px; font-weight: 800; letter-spacing: 1px; }
-
-        .era-icon-placeholder { width: 30px; height: 45px; border: 2px solid #D4CFC4; margin-bottom: 15px; display: flex; flex-direction: column; justify-content: space-evenly; align-items: center; }
-        .era-icon-placeholder::before, .era-icon-placeholder::after { content: ""; width: 20px; height: 2px; background: #D4CFC4; }
-        
-        .era-num { font-size: 16px; font-weight: 900; color: #111; margin-bottom: 5px; }
-        .card-name { font-size: 10px; font-weight: 700; text-transform: uppercase; line-height: 1.4; letter-spacing: 1px; color: #555; text-align: center; }
-        
-        .card-decor { position: absolute; bottom: 10px; font-size: 12px; color: var(--accent-red); }
-        .card-decor.left { left: 10px; }
-        .card-decor.right { right: 10px; }
-
-        /* HEARTBOUND PROMO SECTION */
-        .promo-section { padding: 60px 80px; background-color: var(--bg-paper); display: flex; flex-direction: column; gap: 40px; }
-        
-        .promo-top { display: flex; gap: 50px; align-items: center; }
-        
-        .video-box-container { flex: 0.8; position: relative; }
-        .new-series-ribbon { position: absolute; top: -10px; left: -10px; background: var(--accent-red); color: #fff; font-size: 10px; font-weight: 800; padding: 8px 30px; transform: rotate(-35deg); z-index: 2; box-shadow: 2px 2px 5px rgba(0,0,0,0.2); letter-spacing: 1px; }
-        .video-placeholder { width: 100%; aspect-ratio: 16/9; background-color: #D1CDA; border-radius: 8px; display: flex; flex-direction: column; align-items: center; justify-content: center; position: relative; overflow: hidden; background: #CFCBC0; }
-        .video-placeholder iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none; z-index: 1;}
-        
-        .promo-info { flex: 1; }
-        .sub-title { font-size: 11px; font-weight: 800; letter-spacing: 3px; color: #555; margin-bottom: 15px; text-transform: uppercase; display: flex; align-items: center; gap: 10px; }
-        .sub-title::after { content: "✦"; color: var(--accent-red); font-weight: normal; font-size: 14px; }
-        .promo-info h2 { font-family: 'Playfair Display', serif; font-size: 56px; margin-bottom: 20px; color: var(--bg-dark); line-height: 1; }
-        .promo-info p { font-size: 15px; line-height: 1.6; color: #444; margin-bottom: 30px; max-width: 450px; font-weight: 500; }
-        
-        .btn-small { background-color: var(--bg-dark); color: #fff; padding: 12px 25px; border: none; border-radius: 20px; font-size: 11px; font-weight: 700; letter-spacing: 1px; cursor: pointer; display: inline-flex; align-items: center; gap: 10px; }
-        .btn-small:hover { background-color: var(--accent-red); }
-
-        /* 4 CARDS GRID */
-        .cards-row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
-        .info-card { background: var(--card-bg); border: 1px solid var(--border-light); padding: 30px 20px; text-align: center; border-radius: 8px; display: flex; flex-direction: column; justify-content: space-between; align-items: center; box-shadow: 0 5px 15px rgba(0,0,0,0.02); }
-        .info-card-icon { font-size: 32px; color: var(--accent-red); margin-bottom: 15px; font-style: normal; }
-        .info-card h4 { font-size: 12px; margin-bottom: 10px; font-weight: 800; letter-spacing: 1px; color: #111; }
-        .info-card p { font-size: 12px; color: #666; line-height: 1.5; margin-bottom: 25px; font-weight: 500; }
-        .card-btn { padding: 10px 0; width: 100%; font-size: 10px; border: 1px solid var(--border-light); background: transparent; cursor: pointer; border-radius: 4px; font-weight: 700; color: #111; letter-spacing: 1px; transition: 0.3s; }
-        .card-btn:hover { border-color: var(--bg-dark); background: var(--bg-dark); color: #fff; }
-
-        /* FOOTER */
-        footer { background-color: var(--bg-dark); color: #fff; padding: 60px 80px 40px 80px; position: relative; }
-        .footer-grid { display: grid; grid-template-columns: 1fr 1.5fr 1fr 1.5fr; gap: 40px; margin-bottom: 60px; }
-        
-        .footer-col.brand h3 { font-family: 'Playfair Display', serif; font-size: 24px; margin-bottom: 5px; }
-        .footer-col.brand h3 span { color: var(--accent-red); }
-        .footer-col.brand p { font-size: 12px; color: #888; margin-bottom: 20px; }
-        .social-icons { display: flex; gap: 15px; font-size: 16px; color: #ccc; }
-        
-        .footer-col h4 { font-size: 11px; margin-bottom: 20px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: #fff; }
-        .footer-col p { font-size: 12px; color: #888; line-height: 1.8; }
-        .footer-col ul { list-style: none; }
-        .footer-col ul li { font-size: 12px; color: #888; margin-bottom: 10px; }
-
-        .footer-bottom { text-align: center; border-top: 1px solid #333; padding-top: 20px; font-size: 11px; color: #666; letter-spacing: 1px; }
-
-        /* PINNED NOTE IN FOOTER */
-        .pinned-note { position: absolute; bottom: 30px; right: 50px; background: #F8F5EE; color: #111; padding: 25px; width: 220px; transform: rotate(-3deg); box-shadow: 5px 5px 15px rgba(0,0,0,0.3); font-family: 'Caveat', cursive; font-size: 24px; line-height: 1.2; text-align: center; z-index: 10; border-radius: 2px; }
-        .pinned-note::before { content: ""; position: absolute; top: -10px; left: 50%; transform: translateX(-50%); width: 40px; height: 15px; background: rgba(200, 50, 50, 0.6); z-index: 11; }
-
-        /* MEET THE CAST SECTION (Added below so you don't lose the content) */
-        .cast-section { padding: 60px 80px; background-color: #F8F5EE; border-top: 1px solid var(--border-light); }
-        .cast-header { text-align: center; margin-bottom: 40px; }
-        .cast-header h3 { font-family: 'Playfair Display', serif; font-size: 32px; color: var(--bg-dark); }
-        .cast-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; }
-        .cast-profile { background: #fff; border: 1px solid var(--border-light); border-radius: 8px; overflow: hidden; text-align: center; }
-        .cast-img-container { width: 100%; height: 300px; background: #eae6db; }
-        .cast-img-container img { width: 100%; height: 100%; object-fit: cover; }
-        .cast-details { padding: 20px; }
-        .cast-details h4 { font-size: 16px; font-weight: 800; color: var(--accent-red); margin-bottom: 5px; }
-        .cast-details h5 { font-size: 11px; font-weight: 600; color: #777; margin-bottom: 15px; text-transform: uppercase; }
-        .cast-details p { font-size: 12px; line-height: 1.6; color: #555; margin-bottom: 15px; }
-
-    </style>
+:root{--paper:#f7f3ed;--surface:#fffdf9;--ink:#28241f;--muted:#837b72;--line:#e2d9ce;--red:#8a3439;--rose:#ede0da;--dark:#282322;--serif:'Playfair Display',Georgia,serif;--sans:'Inter',Arial,sans-serif}
+*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth;scroll-padding-top:90px}body{font-family:var(--sans);background:var(--paper);color:var(--ink);font-size:14px;line-height:1.6}a{color:inherit;text-decoration:none}button{font:inherit;cursor:pointer}button,a{-webkit-tap-highlight-color:transparent}button:focus-visible,a:focus-visible,[tabindex]:focus-visible{outline:3px solid var(--red);outline-offset:5px}button:disabled{cursor:default}svg{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}::selection{background:var(--rose)}
+header{max-width:1440px;margin:auto;display:flex;align-items:center;justify-content:space-between;padding:24px 6%;border-bottom:1px solid var(--line);gap:24px;background:var(--paper)}.brand-lockup{display:flex;align-items:center;gap:15px}.ps-mark{height:42px;width:42px;display:grid;place-items:center;border:1px solid var(--red);border-radius:50%;font:italic 19px var(--serif);color:var(--red);letter-spacing:-3px;padding-right:3px}.logo-title{font:700 24px var(--serif);letter-spacing:-1px;line-height:1.1;position:relative}.logo-title .star{color:var(--red);display:inline;font:16px var(--sans);margin-left:5px}.logo-title span.sub{display:block;font:9px var(--sans);letter-spacing:1.8px;text-transform:uppercase;color:var(--muted);margin-top:8px}.creator{font-size:10px;color:var(--muted);border-left:1px solid var(--line);padding-left:18px}.creator a{color:var(--red)}nav ul{display:flex;list-style:none;gap:27px;align-items:center}nav a{font-size:10px;font-weight:600;letter-spacing:1.1px;color:var(--muted);padding:9px 0;display:block}nav a.active{color:var(--red);border-bottom:1px solid var(--red)}nav a:hover{color:var(--red)}
+.hero{max-width:1440px;margin:auto;padding:67px 8% 55px;display:grid;grid-template-columns:1.08fr 1fr;gap:65px;align-items:center;min-height:570px}.hero-left{position:relative;z-index:1}.eyebrow{font-size:11px;letter-spacing:2.3px;font-weight:600;color:var(--red);display:flex;align-items:center;gap:10px;margin-bottom:20px}.eyebrow:before{content:'';width:24px;height:1px;background:var(--red)}.script-text{font:italic 23px var(--serif);color:var(--red);margin-bottom:8px}.hero-left h1{font:500 clamp(40px,4.65vw,68px)/1.09 var(--serif);letter-spacing:-2.5px;margin-bottom:23px;max-width:620px}.hero-left h1 span{color:var(--red);font-style:italic}.hero-desc{font-size:12px;line-height:1.9;color:#736a61;max-width:335px;margin-bottom:25px}.btn-black{padding:15px 21px;background:var(--red);color:white;border:1px solid var(--red);border-radius:3px;font-size:10px;letter-spacing:1.3px;font-weight:600;display:inline-flex;align-items:center;gap:32px;transition:background .2s,transform .2s;margin-bottom:27px}.btn-black:hover{background:#68262b;transform:translateY(-2px)}.btn-black .arrow{font-size:18px}.hero-steps{display:flex;gap:14px;align-items:center;color:var(--muted);font-size:9px;letter-spacing:.6px}.hero-steps span{display:flex;gap:7px;align-items:center;white-space:nowrap}.step-icon{font:10px var(--serif);color:var(--red);border:1px solid var(--line);width:22px;height:22px;border-radius:50%;display:grid;place-items:center}.hero-right{position:relative;padding:19px 22px 16px 0}.hero-right:before{content:'';position:absolute;top:0;right:0;width:87%;height:87%;border:1px solid #d7c7ba;border-radius:170px 170px 8px 8px;transform:rotate(5deg)}.image-placeholder{position:relative;aspect-ratio:1.18;background:#e6ddd1;border:9px solid var(--surface);border-bottom-width:43px;box-shadow:0 16px 35px #45322714;transform:rotate(-3deg);border-radius:3px}.image-placeholder img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:2}.image-placeholder>p{display:none}.image-placeholder:after{content:'PerthSanta, always. ♡';position:absolute;bottom:-36px;left:0;right:0;text-align:center;font:22px 'Caveat',cursive;color:var(--red)}.photo-fallback{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;flex-direction:column;background:radial-gradient(ellipse at 20% 15%,#f2e7db,transparent 65%),linear-gradient(125deg,#e3d8ca,#d1bdab);overflow:hidden}.photo-fallback:before{content:'';position:absolute;inset:20px;border:1px solid #fffcf680}.photo-fallback .monogram{font:italic 82px var(--serif);color:#9b7d67;line-height:1;letter-spacing:-8px;padding-right:8px}.photo-fallback small{font-size:10px;letter-spacing:2px;color:#897260;margin-top:15px;text-transform:uppercase}.hero-note{position:absolute;bottom:-6px;right:0;font:24px 'Caveat',cursive;color:var(--red);transform:rotate(-7deg);z-index:3}.tape{position:absolute;top:0;left:35%;width:78px;height:24px;background:#c7b6a26b;transform:rotate(-12deg);z-index:4}.hero-tag{position:absolute;top:46px;right:-2px;z-index:4;background:var(--surface);border:1px solid var(--line);padding:8px 13px;font-size:10px;letter-spacing:1px;transform:rotate(6deg);box-shadow:0 6px 12px #281f1610;color:var(--red)}
+.eras-wrapper{max-width:1440px;margin:auto;padding:34px 8% 40px;border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:#f2ede5}.era-heading{display:flex;align-items:center;justify-content:space-between;gap:20px;margin-bottom:24px}.section-title{font:400 28px var(--serif);letter-spacing:-.6px;line-height:1.2}.section-title::before,.section-title::after{content:none}.section-kicker{font-size:10px;letter-spacing:2px;color:var(--red);font-weight:600;display:block;margin-bottom:7px}.era-heading p{font-size:10px;color:var(--muted);margin-top:6px}.era-arrows{display:flex;gap:8px}.era-arrows button{width:32px;height:32px;border:1px solid #d5c9bb;border-radius:50%;background:transparent;color:var(--ink);font-size:16px}.era-arrows button:hover{background:var(--surface)}.scroll-container{display:flex;gap:11px;overflow-x:auto;scrollbar-width:thin;scrollbar-color:#cdbcb0 transparent;padding:9px 2px 13px;scroll-snap-type:x mandatory;align-items:stretch}.era-card{position:relative;flex:1 0 104px;min-width:104px;height:142px;border:1px solid #ded4c8;border-radius:5px;background:#faf7f1;display:flex;align-items:center;flex-direction:column;justify-content:center;transition:transform .2s,background .2s,border-color .2s;scroll-snap-align:start;padding:11px 5px;color:var(--ink)}.era-card:hover{transform:translateY(-4px);border-color:var(--red)}.era-card.active-card{border-color:var(--red);background:var(--red);color:white;box-shadow:0 5px 14px #8a34391a}.badge-new{position:absolute;top:-9px;right:7px;background:var(--surface);border:1px solid var(--red);color:var(--red);font-size:11px;letter-spacing:.8px;padding:2px 6px;border-radius:3px;font-weight:600}.era-icon-placeholder{width:21px;height:33px;border:1px solid #c0ab97;border-radius:1px;padding:3px;display:flex;flex-direction:column;gap:3px;transform:rotate(-5deg);margin-bottom:8px}.era-icon-placeholder:before,.era-icon-placeholder:after{content:'';width:100%;flex:1;background:#dfd0bf}.active-card .era-icon-placeholder{border-color:#dec1bc}.active-card .era-icon-placeholder:before,.active-card .era-icon-placeholder:after{background:#bc7977}.era-card:nth-child(2) .era-icon-placeholder:before,.era-card:nth-child(2) .era-icon-placeholder:after{background:#adc1ba}.era-card:nth-child(3) .era-icon-placeholder:before,.era-card:nth-child(3) .era-icon-placeholder:after{background:#d2bb92}.era-card:nth-child(5) .era-icon-placeholder:before,.era-card:nth-child(5) .era-icon-placeholder:after{background:#9daabf}.era-card:nth-child(6) .era-icon-placeholder:before,.era-card:nth-child(6) .era-icon-placeholder:after{background:#b796a6}.era-num{font:11px var(--serif);color:var(--muted);margin-bottom:6px}.active-card .era-num{color:#ddbab8}.card-name{font-size:10px;font-weight:600;line-height:1.5;letter-spacing:.65px;text-align:center}.card-decor{position:absolute;bottom:7px;font-size:10px;color:#ae8d7e}.card-decor.left{left:8px}.card-decor.right{right:8px}.active-card .card-decor{color:#e8c5c1}.selected-era{margin-top:12px;font-size:11px;color:var(--muted)}.selected-era strong{font-weight:500;color:var(--red)}
+.promo-section{max-width:1440px;margin:auto;padding:55px 8% 48px;display:flex;flex-direction:column;gap:26px}.promo-top{display:grid;grid-template-columns:1fr 1.07fr;gap:45px;align-items:center;background:var(--dark);padding:31px;border-radius:7px;color:#f8f0e6;position:relative;overflow:hidden}.video-box-container{position:relative}.new-series-ribbon{position:absolute;top:10px;left:10px;background:var(--red);color:#f8eee8;font-size:11px;padding:5px 9px;letter-spacing:1.2px;z-index:3;border-radius:2px}.video-placeholder{aspect-ratio:16/9;position:relative;overflow:hidden;background:#3b3030;border:1px solid #6f524c;border-radius:3px}.video-placeholder:before{content:'HEARTBOUND';position:absolute;inset:0;display:grid;place-items:center;font:italic 29px var(--serif);color:#c6aba0;letter-spacing:2px}.video-placeholder iframe{position:absolute;inset:0;width:100%;height:100%;border:0;z-index:1}.sub-title{font-size:10px;font-weight:500;letter-spacing:2px;color:#c7aca0;display:flex;gap:10px;align-items:center;margin-bottom:10px}.sub-title:before{content:'';width:6px;height:6px;border-radius:50%;background:#bd7774}.promo-info h2{font:400 clamp(30px,3.2vw,46px) var(--serif);letter-spacing:1px;line-height:1.1;margin-bottom:15px}.promo-info p{font-size:12px;line-height:1.85;color:#bdb0a7;margin-bottom:15px;max-width:510px}.btn-small{display:inline-flex;align-items:center;gap:20px;background:transparent;border:0;border-bottom:1px solid #8c6961;padding:4px 0 7px;color:#f3e9dd;font-size:10px;letter-spacing:1.4px}.btn-small:hover{color:#dca8a0}.cards-row{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.info-card{border:1px solid var(--line);border-radius:5px;padding:21px 18px;background:#fbf8f3;display:flex;flex-direction:column;align-items:flex-start;position:relative}.info-card-icon{display:block;color:var(--red);margin-bottom:13px;height:22px}.info-card h4{font-size:11px;letter-spacing:1px;font-weight:600;margin-bottom:7px}.info-card p{font-size:12px;color:var(--muted);line-height:1.7;margin-bottom:14px}.card-btn{display:flex;align-items:center;justify-content:space-between;border:0;border-top:1px solid var(--line);padding:10px 0 0;background:none;color:var(--red);width:100%;font-size:10px;letter-spacing:.9px;font-weight:500;text-align:left;margin-top:auto}.card-btn:after{content:'↗';font-size:15px}.card-btn:hover{color:var(--ink)}.cards-row a{margin-top:auto}
+.cast-section{max-width:1440px;margin:auto;padding:24px 8% 60px;border-top:1px solid var(--line)}.cast-header{display:flex;align-items:center;justify-content:space-between;margin:20px 0 25px;gap:18px}.cast-header h3{font:400 32px var(--serif);letter-spacing:-.8px}.cast-header p{font-size:10px;color:var(--muted)}.cast-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}.cast-profile{border:1px solid var(--line);border-radius:5px;background:var(--surface);overflow:hidden}.cast-img-container{position:relative;aspect-ratio:1.38;background:#e9dfd2;overflow:hidden}.cast-img-container:before{content:attr(data-initials);position:absolute;inset:0;display:grid;place-items:center;font:italic 54px var(--serif);color:#b49d87;background:linear-gradient(135deg,#eee6db,#ded0bd)}.cast-img-container:after{content:'PERTHSANTA · HEARTBOUND';position:absolute;bottom:14px;left:16px;font-size:11px;letter-spacing:1.5px;color:#8a7664}.cast-img-container img{width:100%;height:100%;object-fit:cover;position:absolute;inset:0;z-index:1}.cast-details{padding:21px}.cast-details h4{font:400 22px var(--serif);letter-spacing:-.5px;line-height:1.2;margin-bottom:6px}.cast-details h5{font-size:10px;font-weight:500;letter-spacing:.8px;text-transform:uppercase;color:var(--red);margin-bottom:13px}.cast-details p{font-size:12px;line-height:1.85;color:var(--muted)}
+footer{background:#eee7dd;border-top:1px solid #dcd1c3;padding:36px max(8%,calc((100vw - 1210px)/2)) 18px;position:relative}.footer-grid{display:grid;grid-template-columns:1fr 1.4fr .85fr 1.05fr;gap:32px;margin-bottom:28px}.footer-col.brand h3{font:700 23px var(--serif);letter-spacing:-1px;margin-bottom:8px}.footer-col.brand h3 span{font:15px var(--sans);color:var(--red);margin-left:5px}.footer-col.brand p{font-size:11px;color:var(--muted)}.social-icons{display:flex;gap:12px;margin-top:12px;color:var(--red);font-size:13px}.footer-col h4{font-size:10px;letter-spacing:1.3px;font-weight:600;margin-bottom:11px}.footer-col p,.footer-col li{font-size:11px;line-height:1.8;color:var(--muted)}.footer-col ul{list-style:none}.footer-col li{margin-bottom:5px}.footer-bottom{border-top:1px solid #dcd1c3;padding-top:16px;font-size:10px;color:#998f84;letter-spacing:.8px;display:flex;justify-content:space-between;align-items:center;gap:15px}.pinned-note{font:20px 'Caveat',cursive;color:var(--red);text-align:right;line-height:1.15;margin-top:14px}.pinned-note br{display:none}.pinned-note br:after{content:' '}
+@media(min-width:1441px){header,.hero,.eras-wrapper,.promo-section,.cast-section{padding-left:115px;padding-right:115px}}
+@media(max-width:1100px){.hero{gap:35px;padding-top:45px;padding-bottom:45px;min-height:500px}.hero-left h1{font-size:48px}.creator{display:none}.hero-steps{gap:10px;font-size:11px}.promo-top{gap:25px;padding:24px}.cast-details h4{font-size:20px}.card-name{font-size:10px}.footer-grid{gap:22px}}
+@media(max-width:760px){header{flex-wrap:wrap;padding:19px 6% 12px;gap:16px}.brand-lockup{gap:10px}.ps-mark{width:35px;height:35px;font-size:16px}.logo-title{font-size:23px}nav{width:100%;overflow-x:auto}nav ul{justify-content:space-between;gap:17px}nav a{font-size:10px;white-space:nowrap}.hero{padding:35px 6% 40px;grid-template-columns:1fr;gap:31px;min-height:0}.hero-left h1{font-size:clamp(39px,8vw,58px);letter-spacing:-1.7px;max-width:580px}.hero-desc{max-width:360px}.hero-steps{gap:17px;font-size:10px}.hero-right{width:min(100%,430px);margin:auto;padding:16px 17px 18px 0}.image-placeholder{aspect-ratio:1.35}.hero-tag{top:39px}.hero-note{font-size:22px}.eras-wrapper{padding:28px 6% 24px}.section-title{font-size:26px}.era-heading{margin-bottom:16px}.era-card{flex-basis:107px;height:137px}.promo-section{padding:33px 6% 32px;gap:18px}.promo-top{grid-template-columns:1fr;gap:26px;padding:23px}.promo-info h2{font-size:35px}.promo-info p{font-size:11px}.cards-row{grid-template-columns:1fr 1fr;gap:11px}.info-card{padding:18px 15px}.cast-section{padding:12px 6% 36px}.cast-header{align-items:flex-start;flex-direction:column;gap:3px}.cast-header h3{font-size:29px}.cast-grid{grid-template-columns:1fr;gap:15px}.cast-profile{display:grid;grid-template-columns:35% 1fr}.cast-img-container{height:100%;aspect-ratio:auto;min-height:185px}.cast-img-container:before{font-size:40px}.cast-img-container:after{font-size:5px;left:8px;bottom:9px;letter-spacing:.7px}.cast-details{padding:19px 15px}.cast-details p{font-size:10px}.cast-details h4{font-size:21px}footer{padding:29px 6% 18px}.footer-grid{grid-template-columns:1fr 1fr;gap:26px 22px}.footer-bottom{flex-wrap:wrap}.pinned-note{font-size:20px}.hero-tag{font-size:11px}}
+@media(max-width:370px){.hero-steps{flex-wrap:wrap;gap:10px}.hero-left h1{font-size:36px}.cast-profile{grid-template-columns:1fr}.cast-img-container{aspect-ratio:1.4;min-height:0}.footer-grid{grid-template-columns:1fr}.promo-info h2{font-size:29px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+</style>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%238a3439'/%3E%3Crect x='9' y='5' width='14' height='22' rx='1' fill='%23f7f3ed'/%3E%3Cpath d='M11 8h10v6H11zM11 16h10v6H11z' fill='%238a3439'/%3E%3C/svg%3E">
 </head>
 <body>
 
     <!-- HEADER -->
-    <header>
-        <div class="logo-title">THE BOOTH.<span class="star">✦</span><span class="sub">capture the moment.</span></div>
+    <header id="home">
+        <div class="brand-lockup"><span class="ps-mark" aria-label="PerthSanta">PS</span><a href="#home" class="logo-title">THE BOOTH.<span class="star">✦</span><span class="sub">A PerthSanta fan photobooth</span></a><span class="creator">made with love by <a href="https://x.com/laylayleee" target="_blank" rel="noopener noreferrer">@laylayleee</a></span></div>
         <nav>
             <ul>
-                <li><a href="#" class="active">HOME</a></li>
+                <li><a href="#home" class="active">HOME</a></li>
                 <li><a href="#photobooth">PHOTOBOOTH</a></li>
                 <li><a href="#heartbound">HEARTBOUND</a></li>
                 <li><a href="#">GALLERY</a></li>
-                <li><a href="#">ABOUT</a></li>
+                <li><a href="#about">ABOUT</a></li>
             </ul>
         </nav>
     </header>
@@ -167,95 +47,85 @@
     <!-- HERO SECTION -->
     <section class="hero" id="photobooth">
         <div class="hero-left">
-            <div class="script-text">capture the moment.</div>
-            <h1>MAKE YOUR OWN<br>FAN <span>PHOTOBOOTH.</span></h1>
+            <div class="eyebrow">FOR THE MOMENTS WE WANT TO KEEP</div><div class="script-text">capture the moment.</div>
+            <h1>Make your own<br>fan <span>photobooth.</span></h1>
             <p class="hero-desc">Take 10 photos, pick your favorite 4, and create your own photo strip.</p>
             
-            <button class="btn-black">START THE BOOTH <span class="arrow">&rarr;</span></button>
+            <button class="btn-black" id="start-booth" type="button" data-era="HEARTBOUND">START THE BOOTH <span class="arrow">&rarr;</span></button>
             
             <div class="hero-steps">
-                <span><i class="step-icon">📷</i> TAKE 10 PHOTOS</span>
-                <span><i class="step-icon">🖼️</i> CHOOSE 4</span>
-                <span><i class="step-icon">🎞️</i> CREATE & SAVE</span>
+                <span><i class="step-icon">01</i> TAKE 10 PHOTOS</span>
+                <span><i class="step-icon">02</i> CHOOSE 4</span>
+                <span><i class="step-icon">03</i> CREATE & SAVE</span>
             </div>
         </div>
         
-        <div class="hero-right">
+        <div class="hero-right"><span class="tape" aria-hidden="true"></span><span class="hero-tag">PERTH × SANTA &nbsp; / &nbsp; 2026</span>
             <!-- RECTANGULAR PLACEHOLDER FOR USER IMAGE -->
             <div class="image-placeholder">
                 <!-- Buraya kendi görselini koyacaksın. Dosya adı fotograf_4.jfif -->
-                <img src="fotograf_4.jfif" alt="Photobooth Image">
-                <p>Add your image here</p>
-            </div>
+                <div class="photo-fallback" aria-hidden="true"><span class="monogram">PS</span><small>a moment worth keeping</small></div><img src="fotograf_4.jfif" alt="PerthSanta photobooth inspiration">
+
+            </div><span class="hero-note">made for our little universe ♡</span>
         </div>
     </section>
 
     <!-- ERAS CAROUSEL -->
-    <section class="eras-wrapper">
-        <div class="section-title">CHOOSE YOUR ERA</div>
+    <section class="eras-wrapper" id="eras" aria-labelledby="eras-title">
+        <div class="era-heading"><div><span class="section-kicker">TEN ERAS. YOUR STORY.</span><h2 class="section-title" id="eras-title">Choose your era.</h2><p>A different frame for every favourite memory.</p></div><div class="era-arrows"><button type="button" data-scroll="-1" aria-label="Previous eras">←</button><button type="button" data-scroll="1" aria-label="Next eras">→</button></div></div>
         <div class="scroll-container">
-            <div class="era-card">
+            <button type="button" class="era-card" data-era="PERFECT TEN LINERS" aria-pressed="false">
                 <div class="era-icon-placeholder"></div>
                 <div class="era-num">01</div>
                 <div class="card-name">PERFECT<br>TEN LINERS</div>
-                <span class="card-decor left">✦</span>
-            </div>
-            <div class="era-card">
+                <span class="card-decor left">✦</span></button>
+            <button type="button" class="era-card" data-era="ME AND THEE" aria-pressed="false">
                 <div class="era-icon-placeholder"></div>
                 <div class="era-num">02</div>
                 <div class="card-name">ME AND<br>THEE</div>
-                <span class="card-decor right">♡</span>
-            </div>
-            <div class="era-card">
+                <span class="card-decor right">♡</span></button>
+            <button type="button" class="era-card" data-era="LOVE YOU, TEACHER" aria-pressed="false">
                 <div class="era-icon-placeholder"></div>
                 <div class="era-num">03</div>
                 <div class="card-name">LOVE YOU,<br>TEACHER</div>
-                <span class="card-decor right">✦</span>
-            </div>
+                <span class="card-decor right">✦</span></button>
             <!-- ACTIVE CARD -->
-            <div class="era-card active-card">
+            <button type="button" class="era-card active-card" data-era="HEARTBOUND" aria-pressed="true">
                 <div class="badge-new">NEW</div>
                 <div class="era-icon-placeholder"></div>
                 <div class="era-num">04</div>
                 <div class="card-name">HEARTBOUND</div>
-                <span class="card-decor right">♡</span>
-            </div>
-            <div class="era-card">
+                <span class="card-decor right">♡</span></button>
+            <button type="button" class="era-card" data-era="TIME STOPPER CON" aria-pressed="false">
                 <div class="era-icon-placeholder"></div>
                 <div class="era-num">05</div>
                 <div class="card-name">TIME STOPPER<br>CON</div>
-                <span class="card-decor right">✦</span>
-            </div>
-            <div class="era-card">
+                <span class="card-decor right">✦</span></button>
+            <button type="button" class="era-card" data-era="DEVIL'S KISS CON" aria-pressed="false">
                 <div class="era-icon-placeholder"></div>
                 <div class="era-num">06</div>
-                <div class="card-name">DEVIL'S KISS<br>CON</div>
-            </div>
-            <div class="era-card">
+                <div class="card-name">DEVIL'S KISS<br>CON</div></button>
+            <button type="button" class="era-card" data-era="DOMIIA" aria-pressed="false">
                 <div class="era-icon-placeholder"></div>
                 <div class="era-num">07</div>
                 <div class="card-name">DOMIIA</div>
-                <span class="card-decor right">✦</span>
-            </div>
-            <div class="era-card">
+                <span class="card-decor right">✦</span></button>
+            <button type="button" class="era-card" data-era="PERTHSANTA" aria-pressed="false">
                 <div class="era-icon-placeholder"></div>
                 <div class="era-num">08</div>
                 <div class="card-name">PERTHSANTA</div>
-                <span class="card-decor right">♡</span>
-            </div>
-            <div class="era-card">
+                <span class="card-decor right">♡</span></button>
+            <button type="button" class="era-card" data-era="PERTH" aria-pressed="false">
                 <div class="era-icon-placeholder"></div>
                 <div class="era-num">09</div>
                 <div class="card-name">PERTH</div>
-                <span class="card-decor right">✦</span>
-            </div>
-            <div class="era-card">
+                <span class="card-decor right">✦</span></button>
+            <button type="button" class="era-card" data-era="SANTA" aria-pressed="false">
                 <div class="era-icon-placeholder"></div>
                 <div class="era-num">10</div>
                 <div class="card-name">SANTA</div>
-                <span class="card-decor right">♡</span>
-            </div>
-        </div>
+                <span class="card-decor right">♡</span></button>
+        </div><p class="selected-era" aria-live="polite">Your selected era: <strong id="selected-era">HEARTBOUND</strong></p>
     </section>
 
     <!-- HEARTBOUND PROMO SECTION -->
@@ -265,54 +135,52 @@
                 <div class="new-series-ribbon">NEW SERIES</div>
                 <div class="video-placeholder">
                     <!-- YouTube Trailer -->
-                    <iframe src="https://www.youtube.com/embed/I1guVkLJ4mU" title="Heartbound Trailer" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <iframe src="https://www.youtube.com/embed/I1guVkLJ4mU" loading="lazy" title="Heartbound Trailer" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
             </div>
             
             <div class="promo-info">
-                <div class="sub-title">NOW SHOWING</div>
+                <div class="sub-title">IN THE SPOTLIGHT · NEW SERIES</div>
                 <h2>HEARTBOUND</h2>
                 <p>An unexpected event forces Aiyara, a young architect, to cross paths with Gun de Gustro, a ruthless Latin businessman from a mafia family. Like water and oil, they are completely opposite, but as they are caught in a dangerous underworld and power plays, the attraction between them grows stronger.</p>
-                <button class="btn-small">LEARN MORE &rarr;</button>
+                <a class="btn-small" href="#cast">MEET THE CAST &rarr;</a>
             </div>
         </div>
 
         <div class="cards-row">
             <div class="info-card">
-                <i class="info-card-icon">🎬</i>
+                <span class="info-card-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m10 9 5 3-5 3Z"/></svg></span>
                 <h4>WATCH TRAILER</h4>
                 <p>Check out the official trailer.</p>
-                <a href="https://youtu.be/I1guVkLJ4mU" target="_blank" style="width: 100%;"><button class="card-btn">WATCH NOW</button></a>
+                <a href="https://youtu.be/I1guVkLJ4mU" target="_blank" rel="noopener noreferrer" style="width: 100%;" class="card-btn">WATCH NOW</a>
             </div>
             <div class="info-card">
-                <i class="info-card-icon">👥</i>
+                <span class="info-card-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="9" cy="8" r="3"/><path d="M3 21v-3a6 6 0 0 1 12 0v3M16 5a3 3 0 0 1 0 6m2 3a5 5 0 0 1 3 4v3"/></svg></span>
                 <h4>MEET THE CAST</h4>
                 <p>Get to know the amazing cast.</p>
-                <a href="#cast" style="width: 100%;"><button class="card-btn">VIEW CAST</button></a>
+                <a href="#cast" style="width: 100%;" class="card-btn">VIEW CAST</a>
             </div>
             <div class="info-card">
-                <i class="info-card-icon">📺</i>
+                <span class="info-card-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="m8 3 4 4 4-4"/></svg></span>
                 <h4>WHERE TO WATCH</h4>
-                <p>Find out where you can watch.</p>
-                <button class="card-btn">VIEW PLATFORMS</button>
+                <p>Check official viewing announcements.</p>
+                <a class="card-btn" href="https://x.com/HeartboundTH?s=20" target="_blank" rel="noopener noreferrer">VIEW PLATFORMS</a>
             </div>
             <div class="info-card">
-                <i class="info-card-icon">🔗</i>
+                <span class="info-card-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7 0l3-3a5 5 0 0 0-7-7l-2 2M14 11a5 5 0 0 0-7 0l-3 3a5 5 0 0 0 7 7l2-2"/></svg></span>
                 <h4>OFFICIAL LINKS</h4>
                 <p>Follow the official accounts.</p>
-                <a href="https://x.com/HeartboundTH?s=20" target="_blank" style="width: 100%;"><button class="card-btn">GO NOW</button></a>
+                <a href="https://x.com/HeartboundTH?s=20" target="_blank" rel="noopener noreferrer" style="width: 100%;" class="card-btn">GO NOW</a>
             </div>
         </div>
     </section>
 
     <!-- CAST SECTION (Oyuncuların bilgileri kaybolmasın diye buraya ekledim) -->
     <section class="cast-section" id="cast">
-        <div class="cast-header">
-            <h3>Meet The Cast</h3>
-        </div>
+        <div class="cast-header"><div><span class="section-kicker">BEHIND THE STORY</span><h3>Meet the cast.</h3></div><p>The faces behind Heartbound.</p></div>
         <div class="cast-grid">
             <div class="cast-profile">
-                <div class="cast-img-container">
+                <div class="cast-img-container" data-initials="PT">
                     <img src="fotograf_1.jfif" alt="Perth Tanapon">
                 </div>
                 <div class="cast-details">
@@ -322,7 +190,7 @@
                 </div>
             </div>
             <div class="cast-profile">
-                <div class="cast-img-container">
+                <div class="cast-img-container" data-initials="SP">
                     <img src="fotograf_2.jfif" alt="Santa Pongsapak">
                 </div>
                 <div class="cast-details">
@@ -332,7 +200,7 @@
                 </div>
             </div>
             <div class="cast-profile">
-                <div class="cast-img-container">
+                <div class="cast-img-container" data-initials="TT">
                     <img src="fotograf_3.jfif" alt="Tytan">
                 </div>
                 <div class="cast-details">
@@ -345,13 +213,13 @@
     </section>
 
     <!-- FOOTER -->
-    <footer>
+    <footer id="about">
         <div class="footer-grid">
             <div class="footer-col brand">
                 <h3>THE BOOTH.<span>✦</span></h3>
                 <p>by fans, for fans.</p>
                 <div class="social-icons">
-                    <span>𝕏</span> <span>📸</span> <span>▶</span> <span>🎵</span>
+                    <a href="https://x.com/laylayleee" target="_blank" rel="noopener noreferrer" aria-label="laylayleee on X">𝕏</a><a href="https://youtu.be/I1guVkLJ4mU" target="_blank" rel="noopener noreferrer" aria-label="Heartbound trailer">↗</a>
                 </div>
             </div>
             <div class="footer-col">
@@ -373,13 +241,40 @@
         </div>
         
         <div class="footer-bottom">
-            © 2026 THE BOOTH. All rights reserved.
+            <span>© 2026 THE BOOTH. · A fan-made PerthSanta project.</span><span>Made with love by @laylayleee ♡</span>
         </div>
 
         <div class="pinned-note">
-            thank you ♡<br>for supporting<br>PerthSanta!
+            thank you for supporting PerthSanta ♡
         </div>
     </footer>
+
+
+<script>
+// Real supplied photos replace the styled empty states automatically.
+document.querySelectorAll('img').forEach(img=>{
+  const failed=()=>{img.hidden=true;};
+  img.addEventListener('error',failed);
+  img.addEventListener('load',()=>{img.hidden=false;});
+  if(img.complete && !img.naturalWidth) failed();
+});
+const eraButtons=[...document.querySelectorAll('.era-card')];
+eraButtons.forEach(button=>button.addEventListener('click',()=>{
+  eraButtons.forEach(item=>{item.classList.remove('active-card');item.setAttribute('aria-pressed','false');});
+  button.classList.add('active-card');button.setAttribute('aria-pressed','true');
+  document.getElementById('selected-era').textContent=button.dataset.era;
+  document.getElementById('start-booth').dataset.era=button.dataset.era;
+}));
+document.querySelectorAll('[data-scroll]').forEach(button=>button.addEventListener('click',()=>{
+  const row=document.querySelector('.scroll-container');
+  row.scrollBy({left:Number(button.dataset.scroll)*row.clientWidth*.7,behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth'});
+}));
+// Camera flow was not provided in the original file. Retain its entry point,
+// and expose the selected era for the real photobooth integration.
+document.getElementById('start-booth').addEventListener('click',event=>{
+  document.dispatchEvent(new CustomEvent('booth:start',{detail:{era:event.currentTarget.dataset.era}}));
+});
+</script>
 
 </body>
 </html>
